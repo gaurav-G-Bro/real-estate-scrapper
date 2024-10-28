@@ -12,9 +12,12 @@ const ScraperForm = ({ onSubmit }) => {
     setStatus("In Progress");
 
     try {
-      const response = await axios.post( `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/scrape` {
-        url,
-      });
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/scrape`,
+        {
+          url,
+        }
+      );
 
       if (response.status !== 200) {
         throw new Error("Failed to scrape data");
