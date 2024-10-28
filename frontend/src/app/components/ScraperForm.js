@@ -23,6 +23,15 @@ const ScraperForm = ({ onSubmit }) => {
         throw new Error("Failed to scrape data");
       }
 
+      if (
+        (response.data.data["title"] === "" &&
+          response.data.data["location"] === "") ||
+        response.data.data["price"] === ""
+      ) {
+        setStatus("Failed");
+        throw new Error("title, price and location is required");
+      }
+
       setStatus("Completed");
       onSubmit(response.data.data);
     } catch (error) {

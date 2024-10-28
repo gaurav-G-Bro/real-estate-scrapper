@@ -1,6 +1,5 @@
 const ScrapedDataDisplay = ({ data }) => {
   if (!data) return null;
-
   return (
     <div style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
       <div
