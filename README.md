@@ -26,5 +26,4 @@
 #### Designed By: Gaurav
     -> https://www.linkedin.com/in/gaurav-kumar-a945231b0/
 
-
-    
+<sub>Note: make sure to configure you .env file for backend and .env.local file for frontent</sub>
